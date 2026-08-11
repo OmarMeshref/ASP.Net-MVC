@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="Authentication_Authorization/Authentication_Authorization.csproj" Id="0974c0a8-72a2-4f12-a900-f9cdb2eef2d1" />
+  <Project Path="CRUD/CRUD.csproj" />
+</Solution>
