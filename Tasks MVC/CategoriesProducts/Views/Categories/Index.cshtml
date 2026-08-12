@@ -4,38 +4,35 @@
     ViewData["Title"] = "Categories";
 }
 
-<h1>Categories</h1>
+<h1 class="mb-4">Categories</h1>
 
-<a asp-action="Create"
-   class="btn btn-primary mb-3">
-    Add Category
-</a>
+<div class="row row-cols-1 row-cols-md-3 g-4">
 
-<table class="table table-bordered">
-    <thead>
-        <tr>
-            <th>Id</th>
-            <th>Name</th>
-            <th>Image</th>
-        </tr>
-    </thead>
+    @foreach (var category in Model)
+    {
+        <div class="col">
+            <div class="card h-100 shadow-sm">
 
-    <tbody>
+                <img src="@category.ImagePath"
+                     class="card-img-top"
+                     alt="@category.Name"
+                     style="height:220px; object-fit:cover;" />
 
-        @foreach (var category in Model)
-        {
-            <tr>
-                <td>@category.Id</td>
+                <div class="card-body">
+                    <h5 class="card-title">
+                        @category.Name
+                    </h5>
 
-                <td>@category.Name</td>
+                    <a asp-controller="Products"
+                       asp-action="ByCategory"
+                       asp-route-id="@category.Id"
+                       class="btn btn-primary">
 
-                <td>
-                    <img src="@category.ImagePath"
-                         width="100"
-                         height="100" />
-                </td>
-            </tr>
-        }
+                        View Products
+                    </a>
+                </div>
+            </div>
+        </div>
+    }
 
-    </tbody>
-</table>
+</div>

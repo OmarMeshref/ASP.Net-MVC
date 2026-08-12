@@ -7,6 +7,10 @@ namespace CategoriesProducts.ViewModels
         [Required]
         public string Name { get; set; } = string.Empty;
 
+        [Required]
+        [MaxLength(1000)]
+        public string Description { get; set; } = string.Empty;
+
         [Range(0.01, double.MaxValue)]
         public decimal Price { get; set; }
 

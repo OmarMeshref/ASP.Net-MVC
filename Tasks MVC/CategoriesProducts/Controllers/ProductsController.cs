@@ -81,6 +81,7 @@ namespace CategoriesProducts.Controllers
             var product = new Product
             {
                 Name = model.Name,
+                Description = model.Description,
                 Price = model.Price,
                 CategoryId = model.CategoryId,
                 ImagePath =
@@ -92,6 +93,42 @@ namespace CategoriesProducts.Controllers
             await _context.SaveChangesAsync();
 
             return RedirectToAction(nameof(Index));
+        }
+
+        public async Task<IActionResult> ByCategory(int id)
+        {
+            var category =
+                await _context.Categories
+                    .FirstOrDefaultAsync(c => c.Id == id);
+
+            if (category == null)
+            {
+                return NotFound();
+            }
+
+            var products =
+                await _context.Products
+                    .Where(p => p.CategoryId == id)
+                    .ToListAsync();
+
+            ViewBag.CategoryName = category.Name;
+
+            return View(products);
+        }
+
+        public async Task<IActionResult> Details(int id)
+        {
+            var product =
+                await _context.Products
+                    .Include(p => p.Category)
+                    .FirstOrDefaultAsync(p => p.Id == id);
+
+            if (product == null)
+            {
+                return NotFound();
+            }
+
+            return View(product);
         }
     }
 }

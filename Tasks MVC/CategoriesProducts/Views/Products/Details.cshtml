@@ -1,0 +1,41 @@
+﻿@model CategoriesProducts.Models.Product
+
+@{
+    ViewData["Title"] = "Product Details";
+}
+
+<div class="card mx-auto shadow"
+     style="max-width: 700px;">
+
+    <img src="@Model.ImagePath"
+         class="card-img-top"
+         alt="@Model.Name"
+         style="height:350px; object-fit:cover;" />
+
+    <div class="card-body">
+
+        <h2 class="card-title">
+            @Model.Name
+        </h2>
+
+        <p class="text-muted">
+            Category: @Model.Category.Name
+        </p>
+
+        <p class="card-text">
+            @Model.Description
+        </p>
+
+        <h4>
+            Price: @Model.Price.ToString("0.00") JD
+        </h4>
+
+        <a asp-action="ByCategory"
+           asp-route-id="@Model.CategoryId"
+           class="btn btn-secondary mt-3">
+
+            Back to Products
+        </a>
+
+    </div>
+</div>

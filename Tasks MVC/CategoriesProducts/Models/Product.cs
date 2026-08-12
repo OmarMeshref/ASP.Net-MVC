@@ -10,6 +10,10 @@ namespace CategoriesProducts.Models
         [MaxLength(150)]
         public string Name { get; set; } = string.Empty;
 
+        [Required]
+        [MaxLength(1000)]
+        public string Description { get; set; } = string.Empty;
+
         public decimal Price { get; set; }
 
         public string? ImagePath { get; set; }

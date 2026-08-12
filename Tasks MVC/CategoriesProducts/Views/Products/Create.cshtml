@@ -21,6 +21,18 @@
     </div>
 
     <div class="mb-3">
+        <label asp-for="Description"></label>
+
+        <textarea asp-for="Description"
+                  class="form-control"
+                  rows="4">
+        </textarea>
+
+        <span asp-validation-for="Description"
+              class="text-danger"></span>
+    </div>
+
+    <div class="mb-3">
         <label asp-for="Price"></label>
 
         <input asp-for="Price"

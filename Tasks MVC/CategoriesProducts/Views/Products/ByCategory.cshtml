@@ -1,0 +1,51 @@
+﻿@model IEnumerable<CategoriesProducts.Models.Product>
+
+@{
+    ViewData["Title"] = "Products";
+}
+
+<h1 class="mb-4">
+    @ViewBag.CategoryName Products
+</h1>
+
+<div class="row row-cols-1 row-cols-md-3 g-4">
+
+    @foreach (var product in Model)
+    {
+        <div class="col">
+            <div class="card h-100 shadow-sm">
+
+                <img src="@product.ImagePath"
+                     class="card-img-top"
+                     alt="@product.Name"
+                     style="height:220px; object-fit:cover;" />
+
+                <div class="card-body">
+                    <h5 class="card-title">
+                        @product.Name
+                    </h5>
+
+                    <p class="card-text">
+                        @product.Price.ToString("0.00") JD
+                    </p>
+
+                    <a asp-controller="Products"
+                       asp-action="Details"
+                       asp-route-id="@product.Id"
+                       class="btn btn-primary">
+
+                        View Details
+                    </a>
+                </div>
+            </div>
+        </div>
+    }
+
+</div>
+
+<a asp-controller="Categories"
+   asp-action="Index"
+   class="btn btn-secondary mt-4">
+
+    Back to Categories
+</a>
