@@ -1,0 +1,5 @@
+<Solution>
+  <Project Path="CategoriesProducts/CategoriesProducts.csproj" Id="15b7c76a-3e77-44b4-adb2-3b6eb841802a" />
+  <Project Path="CompanyManagement/CompanyManagement.csproj" />
+  <Project Path="IdentityRolesTask/IdentityRolesTask.csproj" Id="7ea7303f-5a6a-4698-badd-efd327c99d43" />
+</Solution>
