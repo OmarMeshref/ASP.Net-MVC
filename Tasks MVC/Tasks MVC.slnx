@@ -1,5 +1,6 @@
 <Solution>
   <Project Path="CategoriesProducts/CategoriesProducts.csproj" Id="15b7c76a-3e77-44b4-adb2-3b6eb841802a" />
   <Project Path="CompanyManagement/CompanyManagement.csproj" />
+  <Project Path="DashboardTemplate/DashboardTemplate.csproj" Id="cf4d8bbd-2ec7-4d38-8123-7cba7ad5cddb" />
   <Project Path="IdentityRolesTask/IdentityRolesTask.csproj" Id="7ea7303f-5a6a-4698-badd-efd327c99d43" />
 </Solution>
