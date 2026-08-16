@@ -1,0 +1,41 @@
+﻿@model Tuple<TupleTask.Models.Student, TupleTask.Models.Course>
+
+@{
+    ViewData["Title"] = "Student and Course";
+}
+
+<h2>Student Information</h2>
+
+<p>
+    <strong>ID : </strong>
+    @Model.Item1.Id
+</p>
+
+<p>
+    <strong>Name : </strong>
+    @Model.Item1.Name
+</p>
+
+<p>
+    <strong>Age : </strong>
+    @Model.Item1.Age
+</p>
+
+<hr />
+
+<h2>Course Information</h2>
+
+<p>
+    <strong>Course ID : </strong>
+    @Model.Item2.CourseId
+</p>
+
+<p>
+    <strong>Course Name : </strong>
+    @Model.Item2.CourseName
+</p>
+
+<p>
+    <strong>Instructor : </strong>
+    @Model.Item2.InstructorName
+</p>
