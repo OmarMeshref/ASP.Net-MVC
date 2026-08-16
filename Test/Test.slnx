@@ -1,4 +1,5 @@
 <Solution>
-  <Project Path="Authentication_Authorization/Authentication_Authorization.csproj" Id="0974c0a8-72a2-4f12-a900-f9cdb2eef2d1" />
-  <Project Path="CRUD/CRUD.csproj" />
+  <Project Path="D:/Orange/ASP.Net-MVC/Test/Authentication_Authorization/Authentication_Authorization.csproj" Id="0974c0a8-72a2-4f12-a900-f9cdb2eef2d1" />
+  <Project Path="D:/Orange/ASP.Net-MVC/Test/CRUD/CRUD.csproj" />
+  <Project Path="D:/Orange/ASP.Net-MVC/Test/Validation/Validation.csproj" Id="377eddf0-be3a-4305-8600-fa412449a8eb" />
 </Solution>

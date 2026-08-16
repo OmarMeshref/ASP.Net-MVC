@@ -1,0 +1,80 @@
+﻿@model Employee
+
+@{
+    ViewData["Title"] = "Create Employee";
+}
+
+<h2>Create Employee</h2>
+
+<form asp-controller="Employee"
+      asp-action="Create"
+      method="post">
+
+      <div asp-validation-summary="All" class="text-danger"></div>
+
+    <div class="mb-3">
+
+        <label asp-for="FullName" class="form-label"></label>
+
+        <input asp-for="FullName"
+               class="form-control" />
+
+        <span asp-validation-for="FullName"
+              class="text-danger"></span>
+
+    </div>
+
+
+    <div class="mb-3">
+
+        <label asp-for="Email" class="form-label"></label>
+
+        <input asp-for="Email"
+               class="form-control" />
+
+        <span asp-validation-for="Email"
+              class="text-danger"></span>
+
+    </div>
+
+
+    <div class="mb-3">
+
+        <label asp-for="Age" class="form-label"></label>
+
+        <input asp-for="Age"
+               class="form-control" />
+
+        <span asp-validation-for="Age"
+              class="text-danger"></span>
+
+    </div>
+
+
+    <div class="mb-3">
+
+        <label asp-for="Salary" class="form-label"></label>
+
+        <input asp-for="Salary"
+               class="form-control" />
+
+        <span asp-validation-for="Salary"
+              class="text-danger"></span>
+
+    </div>
+
+    <button type="submit"
+            class="btn btn-primary">
+
+        Create Employee
+
+    </button>
+
+</form>
+
+
+@section Scripts {
+@{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}
